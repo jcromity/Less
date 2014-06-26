@@ -4,8 +4,11 @@
 <meta charset="utf-8">
 <title>Untitled Document</title>
 <link rel="stylesheet/less" type="text/css" href="styles.less" />
-<script src="http://lesscss.googlecode.com/files/less-1.0.30.min.js"></script>
-<script>less.watch();</script>
+<script>var less = require('less');
+
+less.render('.class { width: (1 + 1) }', function (e, css) {
+  console.log(css);
+});</script>
 </head>
 
 <body>
